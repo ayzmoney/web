@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <canvas id="myCanvas" width="400" height="400"
+style="border:1px solid #c3c3c3;">
+</canvas>
+    <script>
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    var x = 0;
+    var y = 0;
+
+    function drew() {
+      ctx.fillStyle = "#FFFFFF";
+      ctx.fillRect(0,0,400,400);
+      ctx.fillStyle = "#FF0000";
+      ctx.fillRect(x,y,50,50);
+      x += 20;
+      y += 20;
+      if(x == 400) {
+        x = 0;
+        y = 0;
+      } else {
+      }
+    }
+    </script>
+    <button onclick="drew()">heyy</button>
+  </body>
+</html>
